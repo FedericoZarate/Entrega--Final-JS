@@ -11,21 +11,21 @@
   margin: auto;
 }
 
-.new-product {
+.tarjeta-producto {
   max-width: 300px;
   text-align: center;
-  background-color: beige;
+  background-color: rgba(34, 240, 15, 0.404);
   padding: 10px;
   transition: 300ms;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.162);
 }
 
-.new-product:hover {
+.tarjeta-producto:hover {
   translate: 0 -10px;
-  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.162);
+  box-shadow: 0 10px 5px rgba(1, 99, 1, 0.37);
 }
 
-.new-product img {
+.tarjeta-producto img {
   width: 100%;
   aspect-ratio: 1.5;
 }

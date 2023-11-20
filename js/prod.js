@@ -1,5 +1,4 @@
-//array de productos.
-const elementos = [
+const prod = [
   // Bombilla de Alpaca
   {
     id: 1,

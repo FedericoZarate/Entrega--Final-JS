@@ -1,19 +1,19 @@
-const contendorProductos = document.getElementById("product-conteiner");
+const contenedorTarjeta = document.getElementById("product-conteiner");
 
-function cargarProducto(elementos) {
-  elementos.forEach((producto) => {
+function crearProductosInicio(productos) {
+  productos.forEach((producto) => {
     const nuevoProducto = document.createElement("div");
-    nuevoProducto.classList = "new-product";
+    nuevoProducto.classList = "tarjeta-producto";
     nuevoProducto.innerHTML = `
-      <img src=" ${producto.imagen}">
-      <h3>${producto.titulos}</h3>
-      <p>$${producto.precio}</p>
-      <button>Añadir</button>
+        <img src="${producto.imagen}">
+        <h3>${producto.titulos}</h3>
+        <p>$${producto.precio}</p>
+        <button>Agregar</button>
     `;
-    contendorProductos.appendChild(nuevoProducto);
+    contenedorTarjeta.appendChild(nuevoProducto);
     nuevoProducto
       .getElementsByTagName("button")[0]
       .addEventListener("click", () => agregarAlCarrito(producto));
   });
 }
-cargarProducto(elementos);
+crearProductosInicio(prod);

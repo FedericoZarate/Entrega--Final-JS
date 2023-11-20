@@ -36,7 +36,7 @@ header nav img {
   position: relative;
 }
 #cuenta-carrito {
-  background-color: rgb(5, 153, 54);
+  background-color: rgba(167, 236, 190, 0.774);
   border-radius: 100%;
   display: inline-block;
   width: 20px;
@@ -47,7 +47,7 @@ header nav img {
 }
 
 button {
-  background-color: rgba(119, 73, 5, 0.664);
+  background-color: rgba(1, 58, 11, 0.664);
   color: white;
   padding: 5px 10px;
   border: unset;
