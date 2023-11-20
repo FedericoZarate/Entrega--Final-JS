@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#product-conteiner {
+  width: 700px;
+  margin: auto;
+}
+
+.tarjeta-producto {
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.tarjeta-producto img {
+  height: 50px;
+  width: 50px;
+  aspect-ratio: 3;
+}
+
+.tarjeta-producto h3 {
+  width: 130px;
+}
+
+#totales,
+#carritovacio {
+  text-align: center;
+}

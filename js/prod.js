@@ -1,4 +1,4 @@
-const prod = [
+const elementos = [
   // Bombilla de Alpaca
   {
     id: 1,

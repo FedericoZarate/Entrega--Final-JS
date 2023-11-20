@@ -35,7 +35,7 @@ header nav img {
   height: 22px;
   position: relative;
 }
-#cuenta-carrito {
+#idcarrito {
   background-color: rgba(167, 236, 190, 0.774);
   border-radius: 100%;
   display: inline-block;
@@ -59,4 +59,8 @@ footer {
   text-align: center;
   box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.162);
   margin-top: auto;
+}
+
+.fueradevista {
+  display: none;
 }

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="./js/prod.js"></script>
 
     <title>CART</title>
   </head>
@@ -16,9 +18,9 @@
           ><img src="./img/icono mate.png" alt="logo" id="logo"
         /></a>
         <div>
-          <a href="./index.html"
+          <a href="./cart.html"
             ><img src="./img/carro-de-la-compra.png" alt="carrito" /><span
-              id="cuenta-carrito"
+              id="idcarrito"
               >0</span
             ></a
           >
@@ -26,11 +28,22 @@
       </nav>
     </header>
     <main>
+      <p id="carritovacio">
+        No hay productos en el carrito!
+        <a href="./index.html">Agrega algun producto!!</a>
+      </p>
       <section id="product-conteiner"></section>
+      <section id="totales">
+        <p>Total unidades: <span id="unidades">0</span></p>
+        <p>Total precio: $<span id="precios">0</span></p>
+        <button disabled>Comprar</button>
+        <button id="reiniar">Reiniciar</button>
+      </section>
     </main>
-    <footer>© EntregaFinal 2023</footer>
 
-    <script src="./js/main.js"></script>
-    <script src="./js/carritofuncion.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/carrito1.js"></script>
+
+    <footer>© EntregaFinal 2023</footer>
   </body>
 </html>

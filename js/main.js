@@ -16,4 +16,4 @@ function crearProductosInicio(productos) {
       .addEventListener("click", () => agregarAlCarrito(producto));
   });
 }
-crearProductosInicio(prod);
+crearProductosInicio(elementos);
