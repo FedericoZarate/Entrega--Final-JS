@@ -16,6 +16,9 @@ h3,
 p {
   margin: 5px 0;
 }
+.fueradevista {
+  display: none;
+}
 
 header {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.162);
@@ -59,8 +62,4 @@ footer {
   text-align: center;
   box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.162);
   margin-top: auto;
-}
-
-.fueradevista {
-  display: none;
 }

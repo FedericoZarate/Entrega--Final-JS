@@ -28,3 +28,6 @@
 #carritovacio {
   text-align: center;
 }
+.fueradevista {
+  display: none;
+}

@@ -4,6 +4,7 @@ const precioTarjeta = document.getElementById("precios");
 const carritoVacioElement = document.getElementById("carritovacio");
 const totalesElement = document.getElementById("totales");
 const reiniciarCarrito = document.getElementById("reiniar");
+const comprar = document.getElementById("comprar");
 
 function crearProductosInicio() {
   contenedorTarjeta.innerHTML = "";
@@ -43,7 +44,6 @@ function crearProductosInicio() {
 }
 crearProductosInicio();
 
-actualizarTotal();
 function actualizarTotal() {
   const productos = JSON.parse(localStorage.getItem("elementos"));
 
@@ -55,11 +55,39 @@ function actualizarTotal() {
       unidades += producto.cantidad;
       precios += producto.precio * producto.cantidad;
     });
-    unidadesTarjeta.innerText = unidades;
-    precioTarjeta.innerText = precios;
   }
+  unidadesTarjeta.innerText = unidades;
+  precioTarjeta.innerText = precios;
+}
+actualizarTotal();
+
+reiniciarCarrito.addEventListener("click", reiniciarNumeroCarrito);
+function reiniciarNumeroCarrito() {
+  localStorage.removeItem("elementos");
+
   revisarMensajeVacio();
 }
+
+comprar.addEventListener("click", () => {
+  Toastify({
+    text: "Gracias por su compra",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #283618)",
+    },
+
+    onClick: function () {}, // Callback after click
+  }).showToast();
+  reiniciarNumeroCarrito();
+
+  revisarMensajeVacio();
+});
 
 function revisarMensajeVacio() {
   const productos = JSON.parse(localStorage.getItem("elementos"));
@@ -72,11 +100,9 @@ function revisarMensajeVacio() {
     !(productos && productos.length > 0)
   );
 }
-revisarMensajeVacio();
-
-reiniciarCarrito.addEventListener("click", reiniciarNumeroCarrito);
-function reiniciarNumeroCarrito() {
-  localStorage.removeItem("elementos");
-  actualizarTotal();
-}
+// function revisarMensajeVacio() {
+//   const productos = JSON.parse(localStorage.getItem("elementos"));
+//   carritoVacioElement.classList.toggle("fueradevista", productos);
+//   totalesElement.classList.toggle("fueradevista", !productos);
+// }
 revisarMensajeVacio();
