@@ -100,9 +100,5 @@ function revisarMensajeVacio() {
     !(productos && productos.length > 0)
   );
 }
-// function revisarMensajeVacio() {
-//   const productos = JSON.parse(localStorage.getItem("elementos"));
-//   carritoVacioElement.classList.toggle("fueradevista", productos);
-//   totalesElement.classList.toggle("fueradevista", !productos);
-// }
+
 revisarMensajeVacio();

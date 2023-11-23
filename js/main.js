@@ -1,5 +1,11 @@
 const contenedorTarjeta = document.getElementById("product-conteiner");
 
+fetch("./productos.json")
+  .then((Response) => Response.json())
+  .then((data) => {
+    crearProductosInicio(data);
+  });
+
 function crearProductosInicio(productos) {
   productos.forEach((producto) => {
     const nuevoProducto = document.createElement("div");
@@ -16,4 +22,3 @@ function crearProductosInicio(productos) {
       .addEventListener("click", () => agregarAlCarrito(producto));
   });
 }
-crearProductosInicio(elementos);
